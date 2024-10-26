@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-void absoluteValue(int n){
-    if(n<0){
-        printf("%d ",n * (-1));
-    }else{
-        printf("%d ",n);
+
+void absoluteValue(int *arr,int n){
+    for(int i=0;i<n;i++){
+        if(arr[i]<0){
+            arr[i] = -arr[i];
+        }
     }
+    return;
 }
 
 int main() {
@@ -16,8 +18,12 @@ int main() {
     for(int i=0;i<n;i++){
         scanf("%d ",&arr[i]);
     }
+    
+    absoluteValue(arr,n);
+
     for(int i=0;i<n;i++){
-        absoluteValue(arr[i]);
+        printf("%d ",arr[i]);
     }
+
     return 0;
 }
