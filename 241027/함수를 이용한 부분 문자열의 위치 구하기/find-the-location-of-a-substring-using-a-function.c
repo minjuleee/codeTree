@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-char input[100];
-char target[100];
+char input[1001];
+char target[1001];
 
 int findSubstringIndex() {
     int inputLen = strlen(input);
