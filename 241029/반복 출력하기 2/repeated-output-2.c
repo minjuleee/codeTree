@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 void printHW(int n){
-    for(int i=0;i<n;i++){
-        printf("HelloWorld\n");
-    }
+    if(n==0) return;
+
+    printHW(n - 1);
+    printf("HelloWorld\n");
 }
 
 int main() {
